@@ -26,10 +26,9 @@ script:
   - bundle exec rake docs:build
 
 rvm:
-  - jruby-9.2.0.0
-  - 2.4
-  - 2.5.5
-  - 2.6
+  - 2.7
+  - 2.5
+  - jruby-9.2
 
 gemfile:
   - gemfiles/rails_60.gemfile
@@ -45,11 +44,5 @@ env:
 matrix:
   fast_finish: true
 
-  exclude:
-    - rvm: 2.4
-      gemfile: gemfiles/rails_60.gemfile
-    - rvm: 2.6
-      gemfile: gemfiles/rails_42.gemfile
-
   allow_failures:
-    - rvm: jruby-9.2.0.0
+    - rvm: jruby-9.2
